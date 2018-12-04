@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F44CF83021B67C980066A006 /* SwipeableChoiceButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49C925221B4EC6A00837936 /* SwipeableChoiceButton.framework */; };
 		F49C925721B4EC6A00837936 /* Swipeable_choice_button.h in Headers */ = {isa = PBXBuildFile; fileRef = F49C925521B4EC6A00837936 /* Swipeable_choice_button.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F49C926421B4ECAF00837936 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C926321B4ECAF00837936 /* AppDelegate.swift */; };
 		F49C926621B4ECAF00837936 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C926521B4ECAF00837936 /* ViewController.swift */; };
 		F49C926921B4ECAF00837936 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49C926721B4ECAF00837936 /* Main.storyboard */; };
 		F49C926B21B4ECB100837936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49C926A21B4ECB100837936 /* Assets.xcassets */; };
 		F49C926E21B4ECB100837936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49C926C21B4ECB100837936 /* LaunchScreen.storyboard */; };
-		F49C927421B4ECC400837936 /* Swipeable_choice_button.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49C925221B4EC6A00837936 /* Swipeable_choice_button.framework */; };
 		F49C927621B4ECF300837936 /* UISwipeableChoiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C927521B4ECF300837936 /* UISwipeableChoiceButton.swift */; };
 		F49C927821B4EDBC00837936 /* Design.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49C927721B4EDBC00837936 /* Design.xib */; };
 		F49C927B21B4F0E600837936 /* UIChoiceButtonDesign.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49C927A21B4F0E600837936 /* UIChoiceButtonDesign.xib */; };
@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F49C925221B4EC6A00837936 /* Swipeable_choice_button.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swipeable_choice_button.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F49C925221B4EC6A00837936 /* SwipeableChoiceButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwipeableChoiceButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49C925521B4EC6A00837936 /* Swipeable_choice_button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swipeable_choice_button.h; sourceTree = "<group>"; };
 		F49C925621B4EC6A00837936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F49C926121B4ECAF00837936 /* SwipeableChoiceExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeableChoiceExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F49C927421B4ECC400837936 /* Swipeable_choice_button.framework in Frameworks */,
+				F44CF83021B67C980066A006 /* SwipeableChoiceButton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +61,7 @@
 		F49C924821B4EC6A00837936 = {
 			isa = PBXGroup;
 			children = (
-				F49C925421B4EC6A00837936 /* Swipeable choice button */,
+				F49C925421B4EC6A00837936 /* SwipeableChoiceButton */,
 				F49C926221B4ECAF00837936 /* SwipeableChoiceExample */,
 				F49C925321B4EC6A00837936 /* Products */,
 				F49C927321B4ECC400837936 /* Frameworks */,
@@ -71,13 +71,13 @@
 		F49C925321B4EC6A00837936 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F49C925221B4EC6A00837936 /* Swipeable_choice_button.framework */,
+				F49C925221B4EC6A00837936 /* SwipeableChoiceButton.framework */,
 				F49C926121B4ECAF00837936 /* SwipeableChoiceExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F49C925421B4EC6A00837936 /* Swipeable choice button */ = {
+		F49C925421B4EC6A00837936 /* SwipeableChoiceButton */ = {
 			isa = PBXGroup;
 			children = (
 				F49C927921B4F0AD00837936 /* ChoiceButton */,
@@ -87,7 +87,7 @@
 				F49C927721B4EDBC00837936 /* Design.xib */,
 				F49C927E21B4F49C00837936 /* Assetes.xcassets */,
 			);
-			path = "Swipeable choice button";
+			path = SwipeableChoiceButton;
 			sourceTree = "<group>";
 		};
 		F49C926221B4ECAF00837936 /* SwipeableChoiceExample */ = {
@@ -133,9 +133,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F49C925121B4EC6A00837936 /* Swipeable choice button */ = {
+		F49C925121B4EC6A00837936 /* SwipeableChoiceButton */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F49C925A21B4EC6A00837936 /* Build configuration list for PBXNativeTarget "Swipeable choice button" */;
+			buildConfigurationList = F49C925A21B4EC6A00837936 /* Build configuration list for PBXNativeTarget "SwipeableChoiceButton" */;
 			buildPhases = (
 				F49C924D21B4EC6A00837936 /* Headers */,
 				F49C924E21B4EC6A00837936 /* Sources */,
@@ -146,9 +146,9 @@
 			);
 			dependencies = (
 			);
-			name = "Swipeable choice button";
+			name = SwipeableChoiceButton;
 			productName = "Swipeable choice button";
-			productReference = F49C925221B4EC6A00837936 /* Swipeable_choice_button.framework */;
+			productReference = F49C925221B4EC6A00837936 /* SwipeableChoiceButton.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F49C926021B4ECAF00837936 /* SwipeableChoiceExample */ = {
@@ -187,7 +187,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F49C924C21B4EC6A00837936 /* Build configuration list for PBXProject "Swipeable choice button" */;
+			buildConfigurationList = F49C924C21B4EC6A00837936 /* Build configuration list for PBXProject "SwipeableChoiceButton" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -200,7 +200,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F49C925121B4EC6A00837936 /* Swipeable choice button */,
+				F49C925121B4EC6A00837936 /* SwipeableChoiceButton */,
 				F49C926021B4ECAF00837936 /* SwipeableChoiceExample */,
 			);
 		};
@@ -403,14 +403,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Swipeable choice button/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SwipeableChoiceButton/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ir.tinypro.Swipeable-choice-button";
+				PRODUCT_BUNDLE_IDENTIFIER = ir.tinypro.SwipeableChoiceButton;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -430,14 +430,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Swipeable choice button/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SwipeableChoiceButton/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ir.tinypro.Swipeable-choice-button";
+				PRODUCT_BUNDLE_IDENTIFIER = ir.tinypro.SwipeableChoiceButton;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -484,7 +484,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F49C924C21B4EC6A00837936 /* Build configuration list for PBXProject "Swipeable choice button" */ = {
+		F49C924C21B4EC6A00837936 /* Build configuration list for PBXProject "SwipeableChoiceButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F49C925821B4EC6A00837936 /* Debug */,
@@ -493,7 +493,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F49C925A21B4EC6A00837936 /* Build configuration list for PBXNativeTarget "Swipeable choice button" */ = {
+		F49C925A21B4EC6A00837936 /* Build configuration list for PBXNativeTarget "SwipeableChoiceButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F49C925B21B4EC6A00837936 /* Debug */,

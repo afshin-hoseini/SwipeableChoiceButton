@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="width" constant="1" id="uKV-eU-QjA"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFU-JZ-0iu" customClass="UISwipeableChoiceButton" customModule="Swipeable_choice_button">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFU-JZ-0iu" customClass="UISwipeableChoiceButton" customModule="SwipeableChoiceButton">
                                 <rect key="frame" x="0.0" y="303.5" width="375" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Bl8-6G-c0D"/>
