@@ -33,12 +33,13 @@ extension UIChoiceButton {
     
     func startLoading() {
         
-        self.attachIndicator(color: self.imgIcon.tintColor)
+        self.attachIndicator(color: backgroundColor ?? UIColor.blue)
         UIView.animate(withDuration: 0.4) {
             
                 self.imgIcon.tintColor = self.backgroundColor
                 self.backgroundColor = nil
         }
+        
     }
     
     func stopLoading() {
@@ -47,7 +48,6 @@ extension UIChoiceButton {
             
             self.backgroundColor = self.imgIcon.tintColor
             self.imgIcon.tintColor = nil
-            self.deattachIndicator()
         }) {b in self.deattachIndicator()}
     }
 }
