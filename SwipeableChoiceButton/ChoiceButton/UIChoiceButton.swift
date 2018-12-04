@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import NVActivityIndicatorView
 
 @IBDesignable
 class UIChoiceButton: UIControl {
@@ -142,19 +143,12 @@ class UIChoiceButton: UIControl {
         
         didSet {
             
-            
-            UIView.animate(withDuration: 0.5) {
-                
                 if self.loading {
-                    self.imgIcon.tintColor = self.backgroundColor
-                    self.backgroundColor = nil
+                    startLoading()
                 }
                 else {
-                    
-                    self.backgroundColor = self.imgIcon.tintColor
-                    self.imgIcon.tintColor = nil
+                    stopLoading()
                 }
-            }
         }
     }
     
@@ -167,6 +161,8 @@ class UIChoiceButton: UIControl {
         
         return center.x < ((superview?.bounds.width ?? 20) / 2) ? .left : .right
     }
+    
+    var progressIndicatorView : NVActivityIndicatorView?
     
     private var bundle : Bundle {
         return Bundle.init(for: UIChoiceButton.self)

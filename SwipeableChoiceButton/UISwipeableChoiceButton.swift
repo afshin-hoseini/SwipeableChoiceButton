@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-@IBDesignable
+
 public class UISwipeableChoiceButton : UIControl {
     
     @IBOutlet var contentView: UIView!

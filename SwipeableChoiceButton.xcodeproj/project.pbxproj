@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90172A04B4A23C428C88F7D4 /* Pods_SwipeableChoiceButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E7AE2081A328B1D339B24AC /* Pods_SwipeableChoiceButton.framework */; };
 		F44CF83021B67C980066A006 /* SwipeableChoiceButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49C925221B4EC6A00837936 /* SwipeableChoiceButton.framework */; };
+		F44CF83221B68BCB0066A006 /* UIChoiceButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF83121B68BCB0066A006 /* UIChoiceButtonExtension.swift */; };
 		F49C925721B4EC6A00837936 /* Swipeable_choice_button.h in Headers */ = {isa = PBXBuildFile; fileRef = F49C925521B4EC6A00837936 /* Swipeable_choice_button.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F49C926421B4ECAF00837936 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C926321B4ECAF00837936 /* AppDelegate.swift */; };
 		F49C926621B4ECAF00837936 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C926521B4ECAF00837936 /* ViewController.swift */; };
@@ -22,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1275B333E78FC75A37A7C05D /* Pods-SwipeableChoiceButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeableChoiceButton.release.xcconfig"; path = "Target Support Files/Pods-SwipeableChoiceButton/Pods-SwipeableChoiceButton.release.xcconfig"; sourceTree = "<group>"; };
+		8E7AE2081A328B1D339B24AC /* Pods_SwipeableChoiceButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeableChoiceButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6FE658005DF258777BCC376 /* Pods-SwipeableChoiceButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeableChoiceButton.debug.xcconfig"; path = "Target Support Files/Pods-SwipeableChoiceButton/Pods-SwipeableChoiceButton.debug.xcconfig"; sourceTree = "<group>"; };
+		F44CF83121B68BCB0066A006 /* UIChoiceButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIChoiceButtonExtension.swift; sourceTree = "<group>"; };
 		F49C925221B4EC6A00837936 /* SwipeableChoiceButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwipeableChoiceButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49C925521B4EC6A00837936 /* Swipeable_choice_button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swipeable_choice_button.h; sourceTree = "<group>"; };
 		F49C925621B4EC6A00837936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90172A04B4A23C428C88F7D4 /* Pods_SwipeableChoiceButton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C64BE76A2960B5540F9EE5F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6FE658005DF258777BCC376 /* Pods-SwipeableChoiceButton.debug.xcconfig */,
+				1275B333E78FC75A37A7C05D /* Pods-SwipeableChoiceButton.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F49C924821B4EC6A00837936 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +81,7 @@
 				F49C926221B4ECAF00837936 /* SwipeableChoiceExample */,
 				F49C925321B4EC6A00837936 /* Products */,
 				F49C927321B4ECC400837936 /* Frameworks */,
+				C64BE76A2960B5540F9EE5F7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +123,7 @@
 		F49C927321B4ECC400837936 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E7AE2081A328B1D339B24AC /* Pods_SwipeableChoiceButton.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,6 +133,7 @@
 			children = (
 				F49C927A21B4F0E600837936 /* UIChoiceButtonDesign.xib */,
 				F49C927C21B4F0F500837936 /* UIChoiceButton.swift */,
+				F44CF83121B68BCB0066A006 /* UIChoiceButtonExtension.swift */,
 			);
 			path = ChoiceButton;
 			sourceTree = "<group>";
@@ -137,6 +156,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F49C925A21B4EC6A00837936 /* Build configuration list for PBXNativeTarget "SwipeableChoiceButton" */;
 			buildPhases = (
+				6BF1615E47B206865F7C44D3 /* [CP] Check Pods Manifest.lock */,
 				F49C924D21B4EC6A00837936 /* Headers */,
 				F49C924E21B4EC6A00837936 /* Sources */,
 				F49C924F21B4EC6A00837936 /* Frameworks */,
@@ -229,6 +249,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6BF1615E47B206865F7C44D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwipeableChoiceButton-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F49C924E21B4EC6A00837936 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -236,6 +281,7 @@
 			files = (
 				F49C927D21B4F0F500837936 /* UIChoiceButton.swift in Sources */,
 				F49C927621B4ECF300837936 /* UISwipeableChoiceButton.swift in Sources */,
+				F44CF83221B68BCB0066A006 /* UIChoiceButtonExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +440,7 @@
 		};
 		F49C925B21B4EC6A00837936 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6FE658005DF258777BCC376 /* Pods-SwipeableChoiceButton.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -421,6 +468,7 @@
 		};
 		F49C925C21B4EC6A00837936 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1275B333E78FC75A37A7C05D /* Pods-SwipeableChoiceButton.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
