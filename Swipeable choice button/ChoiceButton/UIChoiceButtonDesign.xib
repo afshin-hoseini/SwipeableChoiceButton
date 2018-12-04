@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIChoiceButton" customModule="Swipeable_choice_button" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="hSO-Fk-oIf"/>
+                <outlet property="imgArrow" destination="3OW-Qj-9hU" id="vy6-k8-cGt"/>
+                <outlet property="imgArrowSideConstraint" destination="OIE-U9-enz" id="0Ma-NI-dlR"/>
+                <outlet property="imgIcon" destination="3DM-u9-Se2" id="hda-hg-zjR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="245" height="235"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3DM-u9-Se2">
+                    <rect key="frame" x="61.5" y="59" width="122.5" height="117.5"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3OW-Qj-9hU" userLabel="Arrow">
+                    <rect key="frame" x="192" y="47" width="141" height="141"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="3OW-Qj-9hU" secondAttribute="height" multiplier="1:1" id="Lep-gf-AzM"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="3OW-Qj-9hU" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="6:10" id="2b8-PQ-LOk"/>
+                <constraint firstItem="3DM-u9-Se2" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1:2" id="GOT-bq-8MR"/>
+                <constraint firstItem="3OW-Qj-9hU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="IpU-yc-AfI"/>
+                <constraint firstItem="3OW-Qj-9hU" firstAttribute="leading" secondItem="3DM-u9-Se2" secondAttribute="trailing" constant="8" id="OIE-U9-enz"/>
+                <constraint firstItem="3DM-u9-Se2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="RRt-pl-Hsa"/>
+                <constraint firstItem="3DM-u9-Se2" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="1:2" id="izA-nM-bic"/>
+                <constraint firstItem="3DM-u9-Se2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="rjS-E5-hF0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="149.59999999999999" y="289.20539730134936"/>
+        </view>
+    </objects>
+</document>
