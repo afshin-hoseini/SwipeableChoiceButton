@@ -96,6 +96,24 @@ public class UISwipeableChoiceButton : UIControl {
         trailingChoice.onStatusChanged = onChoiceStatusChanged(_:_:)
     }
     
+    public override func didMoveToWindow() {
+        
+        super.didMoveToWindow()
+        [trailingChoice,leadingChoice].forEach { (choice) in
+            
+            if let _ = window {
+                
+                choice?.animateArrow = true
+            }
+            else {
+                
+                choice?.animateArrow = false
+            }
+        }
+        
+        
+    }
+    
     private func showHelperRangeViews() {
         
         if selectableRangeView == nil {
