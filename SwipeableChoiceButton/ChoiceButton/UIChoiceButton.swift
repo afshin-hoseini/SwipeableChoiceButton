@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import NVActivityIndicatorView
 
-@IBDesignable
+//@IBDesignable
 class UIChoiceButton: UIControl {
     
     enum Status : Int {

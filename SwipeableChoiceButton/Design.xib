@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UISwipeableChoiceButton" customModule="Swipeable_choice_button" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UISwipeableChoiceButton" customModule="SwipeableChoiceButton" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="pc3-rr-L9Y"/>
                 <outlet property="leadingChoice" destination="68k-qs-OoT" id="IaM-jt-MJY"/>
@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="57"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3B4-dq-xhJ" customClass="UIChoiceButton" customModule="Swipeable_choice_button" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3B4-dq-xhJ" customClass="UIChoiceButton" customModule="SwipeableChoiceButton" customModuleProvider="target">
                     <rect key="frame" x="248.5" y="3" width="51.5" height="51"/>
                     <color key="backgroundColor" red="0.0" green="0.79336671520000002" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -36,10 +36,10 @@
                             <color key="value" red="0.0" green="0.79336671520000002" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isLeadingButton" value="NO"/>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="animateArrow" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="animateArrow" value="NO"/>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68k-qs-OoT" customClass="UIChoiceButton" customModule="Swipeable_choice_button" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68k-qs-OoT" customClass="UIChoiceButton" customModule="SwipeableChoiceButton" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="3" width="51.5" height="51"/>
                     <color key="backgroundColor" red="1" green="0.36970449309999998" blue="0.40911911719999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,7 +53,7 @@
                         <userDefinedRuntimeAttribute type="color" keyPath="arrowImageTint">
                             <color key="value" red="1" green="0.36970449309999998" blue="0.40911911719999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="animateArrow" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="animateArrow" value="NO"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGZ-Ww-vLn">

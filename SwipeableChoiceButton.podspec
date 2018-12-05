@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary 	= 'Swipeable choice button for ios, wriiten with swift'
   s.homepage 	= 'https://github.com/afshin-hoseini/SwipeableChoiceButton'
   s.authors  	= { 'Afshin Hoseini' => 'afshin.hoseini@gmail.com' }
-  s.source   	= { :git => 'https://github.com/afshin-hoseini/SwipeableChoiceButton.git' }
+  s.source   	= {:path => '~/⁨Users/afshinhoseini/XcodeProjects/Libs/SwipeableChoice/SwipeableChoiceButton'}#{ :git => 'https://github.com/afshin-hoseini/SwipeableChoiceButton.git' }
 
   s.ios.deployment_target = '12.0'
   s.source_files = "SwipeableChoiceButton/**/*.{h,m,swift}"

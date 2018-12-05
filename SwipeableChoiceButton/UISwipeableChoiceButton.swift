@@ -99,18 +99,22 @@ public class UISwipeableChoiceButton : UIControl {
     public override func didMoveToWindow() {
         
         super.didMoveToWindow()
-        [trailingChoice,leadingChoice].forEach { (choice) in
-            
-            if let _ = window {
-                
-                choice?.animateArrow = true
-            }
-            else {
-                
-                choice?.animateArrow = false
-            }
-        }
         
+        DispatchQueue.main.async { [weak self] in
+            
+            [self?.trailingChoice,self?.leadingChoice].forEach { (choice) in
+                
+                if let _ = self?.window {
+                    
+                    choice?.animateArrow = true
+                }
+                else {
+                    
+                    choice?.animateArrow = false
+                }
+            }
+            
+        }
         
     }
     
