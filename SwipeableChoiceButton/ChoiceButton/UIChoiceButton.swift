@@ -186,13 +186,14 @@ class UIChoiceButton: UIControl {
     
     func reset() {
         
-        status = .idle
         selectedCenterPoint = nil
-        expanded = false
         
+        expanded = false
         if loading { loading = false }
         if !animateArrow { animateArrow = true }
         if fadeOut { fadeOut = false }
+        
+        status = .idle
     }
     private func commonInit() {
         

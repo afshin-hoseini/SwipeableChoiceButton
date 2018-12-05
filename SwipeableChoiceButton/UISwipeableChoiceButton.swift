@@ -127,12 +127,15 @@ public class UISwipeableChoiceButton : UIControl {
 
     public func reset() {
         
-        [leadingChoice, trailingChoice].forEach { (choice) in
+        if isLoading { isLoading = false }
+        
+        [self.leadingChoice, self.trailingChoice].forEach { (choice) in
             
             guard let choice = choice else {return}
             
             choice.reset()
         }
+        
     }
     
     private func onChoiceStatusChanged(_ choice: UIChoiceButton, _ status: UIChoiceButton.Status) {
