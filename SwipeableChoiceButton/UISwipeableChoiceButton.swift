@@ -9,8 +9,13 @@
 import Foundation
 import UIKit
 
-@IBDesignable
+//@IBDesignable
 public class UISwipeableChoiceButton : UIControl {
+    
+    
+    public enum Choice: Int {
+        case none, leading, trailing
+    }
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var trailingChoice: UIChoiceButton!
@@ -26,6 +31,35 @@ public class UISwipeableChoiceButton : UIControl {
     
     private var bundle : Bundle {
         return Bundle.init(for: UISwipeableChoiceButton.self)
+    }
+    
+    public var onChoiceChanged : ((_:Choice)->Void)?
+    private var selectedChoiceButton : UIChoiceButton? {
+        didSet {
+            
+            onChoiceChanged?(self.selectedChoice)
+            sendActions(for: UIControl.Event.valueChanged)
+        }
+    }
+    
+    public var selectedChoice : Choice {
+        
+        switch selectedChoiceButton {
+            
+        case nil : return .none
+        case leadingChoice: return .leading
+        case trailingChoice: return .trailing
+        
+        case .some(_): return .none
+        }
+    }
+    
+    public var isLoading : Bool = false {
+        
+        didSet {
+            
+            selectedChoiceButton?.loading = isLoading
+        }
     }
     
     override init(frame: CGRect) {
@@ -90,15 +124,18 @@ public class UISwipeableChoiceButton : UIControl {
             cancelRangeView?.frame = cancelRect
         }
     }
-    
+
     public func reset() {
         
-        [leadingChoice, trailingChoice].forEach { (choice) in
+        if isLoading { isLoading = false }
+        
+        [self.leadingChoice, self.trailingChoice].forEach { (choice) in
             
             guard let choice = choice else {return}
             
             choice.reset()
         }
+        
     }
     
     private func onChoiceStatusChanged(_ choice: UIChoiceButton, _ status: UIChoiceButton.Status) {
@@ -108,6 +145,7 @@ public class UISwipeableChoiceButton : UIControl {
         switch status {
         case .draggingBegan:
             
+            self.selectedChoiceButton = nil
             //---------------------
             
             let centerX = frame.width/2
@@ -138,19 +176,23 @@ public class UISwipeableChoiceButton : UIControl {
             //To make arrow animations synced on both buttons
             choice.animateArrow = false
             choice.animateArrow = true
+            
+            self.selectedChoiceButton = nil
         case .ended:
             
             let posCenterPoint = CGPoint(x:(choice.frame.width/2) + choice.frame.origin.x, y:choice.frame.height/2)
             if acceptableRect.contains(posCenterPoint) {
                 choice.makeSelected(centerPosition: CGPoint(x: frame.width/2, y: frame.height/2))
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
-                    self.reset()
-                }
             }
             else {
                 choice.cancel()
             }
+            
+        case .selected:
+            self.selectedChoiceButton = choice
+        
+        case .idle:
+            self.selectedChoiceButton = nil
             
         default:
             break

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import NVActivityIndicatorView
 
 @IBDesignable
 class UIChoiceButton: UIControl {
@@ -70,8 +71,9 @@ class UIChoiceButton: UIControl {
                     usingSpringWithDamping: 0.3,
                     initialSpringVelocity: 0,
                     options: [.curveEaseOut, .repeat],
-                    animations: {
-
+                    animations: { [weak self] in
+                        guard let `self` = self else {return}
+                        
                         self.imgArrow.alpha = 1
                         self.imgArrow.transform = CGAffineTransform.init(translationX: (self.bounds.width/2) * CGFloat(self.side.rawValue), y: 0)
                 })
@@ -94,8 +96,9 @@ class UIChoiceButton: UIControl {
                 usingSpringWithDamping: 0.3,
                 initialSpringVelocity: 0,
                 options: [.curveEaseOut],
-                animations: {
-
+                animations: {[weak self] in
+                    guard let `self` = self else {return}
+                    
                     let scale = CGFloat(self.expanded ? 1.4 : 1)
                     
                     var transform = CGAffineTransform.init(scaleX: scale, y: scale)
@@ -119,7 +122,9 @@ class UIChoiceButton: UIControl {
                 self.isHidden = false
                 self.transform = CGAffineTransform.init(translationX: 0, y: 0)
                 
-                UIView.animate(withDuration: 0.2, animations: {
+                UIView.animate(withDuration: 0.2, animations: { [weak self] in
+                    guard let `self` = self else {return}
+                    
                      self.alpha = 0
                 }, completion: {b in self.isHidden = true})
             }
@@ -128,7 +133,9 @@ class UIChoiceButton: UIControl {
                 self.alpha = 0
                 self.isHidden = false
                 self.transform = CGAffineTransform.init(translationX: 0, y: 0)
-                UIView.animate(withDuration: 0.2, animations: {
+                UIView.animate(withDuration: 0.2, animations: {[weak self] in
+                    guard let `self` = self else {return}
+                    
                     self.alpha = 1
                 }, completion: {b in self.isHidden = false})
             }
@@ -142,19 +149,12 @@ class UIChoiceButton: UIControl {
         
         didSet {
             
-            
-            UIView.animate(withDuration: 0.5) {
-                
                 if self.loading {
-                    self.imgIcon.tintColor = self.backgroundColor
-                    self.backgroundColor = nil
+                    startLoading()
                 }
                 else {
-                    
-                    self.backgroundColor = self.imgIcon.tintColor
-                    self.imgIcon.tintColor = nil
+                    stopLoading()
                 }
-            }
         }
     }
     
@@ -167,6 +167,8 @@ class UIChoiceButton: UIControl {
         
         return center.x < ((superview?.bounds.width ?? 20) / 2) ? .left : .right
     }
+    
+    var progressIndicatorView : NVActivityIndicatorView?
     
     private var bundle : Bundle {
         return Bundle.init(for: UIChoiceButton.self)
@@ -184,15 +186,14 @@ class UIChoiceButton: UIControl {
     
     func reset() {
         
-        status = .idle
         selectedCenterPoint = nil
+        
         expanded = false
-        
         if loading { loading = false }
-        
-        animateArrow = true
-        
+        if !animateArrow { animateArrow = true }
         if fadeOut { fadeOut = false }
+        
+        status = .idle
     }
     private func commonInit() {
         
@@ -237,14 +238,6 @@ class UIChoiceButton: UIControl {
         selectedCenterPoint = centerPosition
         animateArrow = false
         expanded = false
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.loading = true
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.loading = false
-            }
-        }
     }
 
     
