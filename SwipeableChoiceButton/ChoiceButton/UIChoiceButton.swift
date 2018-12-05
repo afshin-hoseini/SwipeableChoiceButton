@@ -71,8 +71,9 @@ class UIChoiceButton: UIControl {
                     usingSpringWithDamping: 0.3,
                     initialSpringVelocity: 0,
                     options: [.curveEaseOut, .repeat],
-                    animations: {
-
+                    animations: { [weak self] in
+                        guard let `self` = self else {return}
+                        
                         self.imgArrow.alpha = 1
                         self.imgArrow.transform = CGAffineTransform.init(translationX: (self.bounds.width/2) * CGFloat(self.side.rawValue), y: 0)
                 })
@@ -95,8 +96,9 @@ class UIChoiceButton: UIControl {
                 usingSpringWithDamping: 0.3,
                 initialSpringVelocity: 0,
                 options: [.curveEaseOut],
-                animations: {
-
+                animations: {[weak self] in
+                    guard let `self` = self else {return}
+                    
                     let scale = CGFloat(self.expanded ? 1.4 : 1)
                     
                     var transform = CGAffineTransform.init(scaleX: scale, y: scale)
@@ -120,7 +122,9 @@ class UIChoiceButton: UIControl {
                 self.isHidden = false
                 self.transform = CGAffineTransform.init(translationX: 0, y: 0)
                 
-                UIView.animate(withDuration: 0.2, animations: {
+                UIView.animate(withDuration: 0.2, animations: { [weak self] in
+                    guard let `self` = self else {return}
+                    
                      self.alpha = 0
                 }, completion: {b in self.isHidden = true})
             }
@@ -129,7 +133,9 @@ class UIChoiceButton: UIControl {
                 self.alpha = 0
                 self.isHidden = false
                 self.transform = CGAffineTransform.init(translationX: 0, y: 0)
-                UIView.animate(withDuration: 0.2, animations: {
+                UIView.animate(withDuration: 0.2, animations: {[weak self] in
+                    guard let `self` = self else {return}
+                    
                     self.alpha = 1
                 }, completion: {b in self.isHidden = false})
             }

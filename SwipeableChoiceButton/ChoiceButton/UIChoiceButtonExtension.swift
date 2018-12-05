@@ -33,18 +33,21 @@ extension UIChoiceButton {
     
     func startLoading() {
         
-        self.attachIndicator(color: backgroundColor ?? UIColor.blue)
+        self.attachIndicator(color:  backgroundColor  ?? UIColor.blue)
         UIView.animate(withDuration: 0.4) {
+            [weak self] in
+            guard let `self` = self else {return}
             
-                self.imgIcon.tintColor = self.backgroundColor
-                self.backgroundColor = nil
+            self.imgIcon.tintColor = self.backgroundColor
+            self.backgroundColor = nil
         }
         
     }
     
     func stopLoading() {
         
-        UIView.animate(withDuration: 0.4, animations:{
+        UIView.animate(withDuration: 0.4, animations:{[weak self] in
+            guard let `self` = self else {return}
             
             self.backgroundColor = self.imgIcon.tintColor
             self.imgIcon.tintColor = nil
