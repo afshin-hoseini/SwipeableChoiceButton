@@ -8,7 +8,7 @@ A swipeable choice button, useful for accept/decline, on/off, answer/reject and 
 Append following to your `podfile`
 
 ```
-pod 'SwipeableChoiceButton', :git => 'https://github.com/afshin-hoseini/SwipeableChoiceButton.git', :tag => 'v1.0.1'
+pod 'SwipeableChoiceButton', :git => 'https://github.com/afshin-hoseini/SwipeableChoiceButton.git', :tag => 'v1.0.2'
 ```
 
 and then 
