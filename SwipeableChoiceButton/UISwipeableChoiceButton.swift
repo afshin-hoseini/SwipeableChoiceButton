@@ -143,10 +143,6 @@ public class UISwipeableChoiceButton : UIControl {
             let posCenterPoint = CGPoint(x:(choice.frame.width/2) + choice.frame.origin.x, y:choice.frame.height/2)
             if acceptableRect.contains(posCenterPoint) {
                 choice.makeSelected(centerPosition: CGPoint(x: frame.width/2, y: frame.height/2))
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
-                    self.reset()
-                }
             }
             else {
                 choice.cancel()

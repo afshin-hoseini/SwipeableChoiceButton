@@ -191,9 +191,7 @@ class UIChoiceButton: UIControl {
         expanded = false
         
         if loading { loading = false }
-        
-        animateArrow = true
-        
+        if !animateArrow { animateArrow = true }
         if fadeOut { fadeOut = false }
     }
     private func commonInit() {
@@ -239,14 +237,6 @@ class UIChoiceButton: UIControl {
         selectedCenterPoint = centerPosition
         animateArrow = false
         expanded = false
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.loading = true
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.loading = false
-            }
-        }
     }
 
     
