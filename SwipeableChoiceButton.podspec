@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name   		= 'SwipeableChoiceButton'
-  s.version 	= '1.0.2'
+  s.version 	= '1.0.3'
   s.summary 	= 'Swipeable choice button for ios, wriiten with swift'
   s.homepage 	= 'https://github.com/afshin-hoseini/SwipeableChoiceButton'
   s.authors  	= { 'Afshin Hoseini' => 'afshin.hoseini@gmail.com' }
