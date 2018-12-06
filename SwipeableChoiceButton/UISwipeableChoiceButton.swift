@@ -102,9 +102,11 @@ public class UISwipeableChoiceButton : UIControl {
         
         DispatchQueue.main.async { [weak self] in
             
-            [self?.trailingChoice,self?.leadingChoice].forEach { (choice) in
+            guard let `self` = self else { return }
+            
+            [self.trailingChoice,self.leadingChoice].forEach { (choice) in
                 
-                if let _ = self?.window {
+                if let _ = self.window, self.selectedChoice == .none {
                     
                     choice?.animateArrow = true
                 }
