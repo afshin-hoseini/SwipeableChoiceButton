@@ -1,5 +1,5 @@
-# SwipeableChoiceButton
-A swipeable choice button, useful for accept/decline, on/off, answer/reject and many other uses for swift/ios
+# Swipeable Choice Button
+A sliding / swipeable choice button, useful for accept/decline, on/off, answer/reject and many other uses for swift/ios
 
 [Watch video](https://www.aparat.com/v/12s5l)
 
@@ -8,7 +8,7 @@ A swipeable choice button, useful for accept/decline, on/off, answer/reject and 
 Append following to your `podfile`
 
 ```
-pod 'SwipeableChoiceButton', :git => 'https://github.com/afshin-hoseini/SwipeableChoiceButton.git', :tag => 'v1.0.2'
+pod 'SwipeableChoiceButton', :git => 'https://github.com/afshin-hoseini/SwipeableChoiceButton.git', :tag => 'v1.0.3'
 ```
 
 and then 
