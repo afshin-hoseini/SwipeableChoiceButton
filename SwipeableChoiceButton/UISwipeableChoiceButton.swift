@@ -100,23 +100,23 @@ public class UISwipeableChoiceButton : UIControl {
         
         super.didMoveToWindow()
         
-//        DispatchQueue.main.async { [weak self] in
-//
-//            guard let `self` = self else { return }
-//
-//            [self.trailingChoice,self.leadingChoice].forEach { (choice) in
-//
-//                if let _ = self.window, self.selectedChoice == .none {
-//
-//                    choice?.animateArrow = true
-//                }
-//                else {
-//
-//                    choice?.animateArrow = false
-//                }
-//            }
-//
-//        }
+        DispatchQueue.main.async { [weak self] in
+
+            guard let `self` = self else { return }
+
+            [self.trailingChoice,self.leadingChoice].forEach { (choice) in
+
+                if let _ = self.window, self.selectedChoice == .none {
+
+                    choice?.animateArrow = true
+                }
+                else {
+
+                    choice?.animateArrow = false
+                }
+            }
+
+        }
         
     }
     
