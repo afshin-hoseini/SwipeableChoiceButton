@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwipeableChoiceButton
 
 class ViewController: UIViewController {
 
@@ -16,5 +17,19 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func onSwitched(_ sender: UISwipeableChoiceButton) {
+        
+        if sender.selectedChoice == .none {
+            
+            
+        }
+        else {
+            
+            DispatchQueue.main.async {
+                sender.isLoading = true
+            }
+            
+        }
+    }
 }
 
