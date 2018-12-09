@@ -149,12 +149,14 @@ class UIChoiceButton: UIControl {
         
         didSet {
             
-                if self.loading {
-                    startLoading()
+            DispatchQueue.main.async { [weak self] in
+                if self?.loading ?? false {
+                    self?.startLoading()
                 }
                 else {
-                    stopLoading()
+                    self?.stopLoading()
                 }
+            }
         }
     }
     
